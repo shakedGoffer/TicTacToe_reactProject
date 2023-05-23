@@ -32,7 +32,116 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
+}
+
+body {
+  background-color: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Times New Roman';
+}
+
+* {
+  font-family: 'Times New Roman';
+}
+
+.center_horizontally{
+  place-items: center;
+  display: grid;
+  
+}
+
+.center {
+  place-items: center;
+  display: grid;
+  top: 50%;
+  position: relative;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1{
+  font-size:3vw;
+}
+
+h2{
+  font-size:2vw;
+}
+
+
+
+.square
+{
+  font-family: 'Papyrus';
+  padding: 8px;
+  font-size:4vw;
+  background-color: aquamarine;
+  aspect-ratio: 1 / 1;
+  width: 12vw;
+  height: 12vw;
+  cursor: pointer;
+  border: 2px solid #282c34;
+  place-items: center;
+  display: grid;
+  transition: background-color 0.3s ease;
+  
+}
+
+.square:hover
+{
+  background-color: aqua;
+}
+
+.board-row {
+  display: flex;
+  flex-flow:row nowrap ;
+}
+
+
+/*play btn*/
+
+.glightbox_video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  }
+
+.outer_circle {
+  stroke-width: 3;
+  stroke-dasharray: 410; 
+   stroke-dashoffset: 0;
+  stroke-linecap: square;
+  transition: all .4s ease-out;
+}
+
+.glightbox_video:hover .outer_circle {
+stroke-dashoffset:410;
+  transition: stroke .7s .4s ease-out, stroke-dashoffset .4s ease-out
+}
+
+.glightbox_video:hover 
+.inner-circle {
+  fill: #BF2428;
+  transition:fill .4s .3s ease-out;
+  
+}
+
+.glightbox_video:hover
+.play{
+    fill: white;
+  transition:fill .4s .3s ease-out;
 }
